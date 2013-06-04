@@ -6,7 +6,8 @@
 require 'gangway'
 
 # add a user
-Gangway::Subscriber.add({email: 'test@user.com', subscriber_data: {first_name: 'Test', last_name: 'User'}, handler_id: 1})
+Gangway::Subscriber.add({email: 'test@user.com',
+                         subscriber_data: {first_name: 'Test', last_name: 'User'}, handler_id: 1})
 
 # get subscriber data
 Gangway::Subscriber.get({email: 'test@user.com'})
