@@ -1,9 +1,17 @@
+require 'savon'
+
 module Gangway
   module Session
+
+    ENDPOINTS = {
+      session: 'https://soap.ixs1.net/1/Session?wsdl',
+      subscriber: 'https://soap.ixs1.net/1/Subscriber?wsdl'
+    }
+
     private
 
-    def new_session(globals={})
-      Savon.client(wsdl: globals[:wsdl])
+    def new_session(wsdl)
+      Savon.client(wsdl: ENDPOINTS[wsdl])
     end
   end
 end
