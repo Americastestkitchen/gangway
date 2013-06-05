@@ -5,7 +5,8 @@ module Gangway
     include Session
 
     def call(method, params)
-      session.call(method, message: {session_id: session_id}.merge(params))
+      res = session.call(method, message: {session_id: session_id}.merge(params))
+      return Hash.from_xml(res.body.values.first[:out])
     end
 
     def session
@@ -17,7 +18,7 @@ module Gangway
     end
 
     def new_session_id
-      res = new_session(:session).call :login, message: {username: ENV[:eway_username], password: ENV[:eway_password]}
+      res = new_session(:session).call :login, message: {username: ENV['EWAY_USERNAME'], password: ENV['EWAY_PASSWORD']}
       res.body[:login_response][:out]
     end
   end
