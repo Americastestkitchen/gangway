@@ -10,8 +10,7 @@ Gem::Specification.new do |s|
   s.description = s.summary
   s.authors     = ["America's Test Kitchen"]
 
-  s.files = Dir["lib/**/*"] + ["Rakefile", "README.rdoc"]
-  s.test_files = Dir["spec/**/*"]
+  s.files = Dir["lib/**/*"]
 
   s.add_dependency 'savon',  '~> 2.2.0'
 end
