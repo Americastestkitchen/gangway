@@ -14,7 +14,13 @@ module Gangway
     end
 
     def session_id
-      @session_id ||= new_session_id
+      @last_update ||= Time.now
+      if Time.now >= @last_update + 3600
+        @last_update = Time.now
+        @session_id = new_session_id
+      else
+        @session_id ||= new_session_id
+      end
     end
 
     def new_session_id

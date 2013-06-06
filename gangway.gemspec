@@ -11,7 +11,6 @@ Gem::Specification.new do |s|
   s.authors     = ["America's Test Kitchen"]
 
   s.files = Dir["lib/**/*"]
-  #s.test_files = Dir["spec/**/*"]
 
   s.add_dependency 'savon',  '~> 2.2.0'
 end
