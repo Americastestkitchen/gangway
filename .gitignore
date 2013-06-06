@@ -1,0 +1,13 @@
+.rvmrc
+.DS_Store
+.yardoc
+doc
+rdox
+coverage
+tmp
+*.rbc
+*~
+*.gem
+.bundle
+.rspec
+Gemfile.lock
