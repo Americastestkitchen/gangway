@@ -1,5 +1,3 @@
-require 'gangway/call'
-
 module Gangway
   class Subscriber
     extend Call

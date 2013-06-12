@@ -1,5 +1,3 @@
-require 'gangway/session'
-
 module Gangway
   module Call
     include Session

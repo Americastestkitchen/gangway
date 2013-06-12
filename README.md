@@ -1,5 +1,14 @@
 # Gangway
 
+## ENV Variables
+
+Gangway requires eWay credentials in the .env file
+
+````
+EWAY_USERNAME=username
+EWAY_PASSWORD=password
+````
+
 ## Usage example
 
 ```` ruby
