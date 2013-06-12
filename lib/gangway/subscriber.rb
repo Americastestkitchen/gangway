@@ -1,6 +1,8 @@
+require 'gangway/call'
+
 module Gangway
   class Subscriber
-    extend Call
+    include Call
 
     def self.add(params)
       call(:add_subscriber, params)
