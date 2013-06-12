@@ -2,7 +2,7 @@ require 'gangway/call'
 
 module Gangway
   class Subscriber
-    include Call
+    extend Call
 
     def self.add(params)
       call(:add_subscriber, params)
