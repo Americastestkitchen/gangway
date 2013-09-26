@@ -17,7 +17,17 @@ module Gangway
     end
 
     def self.change_email(params)
-      call(:change_email, params)
+      begin
+        call(:change_email, params)
+      rescue Savon::SOAPFault => e
+        if e.message =~ /invalid email address/
+          # ignore
+          false
+        else
+          raise e
+        end
+      end
+
     end
   end
 end

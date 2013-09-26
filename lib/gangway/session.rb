@@ -11,7 +11,7 @@ module Gangway
     private
 
     def new_session(wsdl)
-      Savon.client(wsdl: ENDPOINTS[wsdl])
+      Savon.client(wsdl: ENDPOINTS[wsdl], ssl_verify_mode: :none)
     end
   end
 end
