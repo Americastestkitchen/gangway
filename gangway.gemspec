@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.summary     = 'eWay SOAP wrapper'
   s.description = s.summary
   s.authors     = ["America's Test Kitchen"]
+  s.license     = 'MIT'
 
   s.files = Dir["lib/**/*"]
 
