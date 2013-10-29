@@ -23,6 +23,9 @@ module Gangway
         if e.message =~ /invalid email address/
           # ignore
           false
+        elsif e.message =~ /email address not found/
+          #ignore
+          false
         else
           raise e
         end
